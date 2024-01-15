@@ -3,14 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {PiedraPapelTijComponent} from './modules/games/components/piedra-papel-tij/piedra-papel-tij.component'
+import {GamesModule} from "./modules/games/games.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    GamesModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
