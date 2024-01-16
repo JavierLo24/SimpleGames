@@ -1,18 +1,29 @@
-<p>piedra-papel-tij works!</p>
-
-<img class="papel "src="./assets/papel.png" alt="">
-
 
 <div class="container">
-  <div class="player 1">
-    <h1>xd</h1>
+  <div class="player .player1">
+    <select [(ngModel)]="select1">
+      <option  selected value="undefined">Select an Option</option>
+      <option value="{{option}}" *ngFor="let option of player1">{{option}}</option>
+    </select>
   </div>
 
-  <div class="player 2">
-    <h1>xd</h1>
+  <div class="player .player2">
+    <div *ngIf="player2 =='papel'">
+      <img class="papel "src="./assets/papel.png" alt="">
+    </div>
+    <div *ngIf="player2 =='tijera'">
+      <img class="tijera "src="./assets/tijera.png" alt="">
+    </div >
+    <div *ngIf="player2 =='piedra'">
+      <img class="piedra "src="./assets/piedra.png" alt="">
+    </div>
   </div>
 </div>
 
+<div class="buttonContainer">
+  <button class="button .BPlay" (click)="cambiarPalabra()">Play</button>
+</div>
+<h1 class="text">{{resultado}}</h1>
 
 
 

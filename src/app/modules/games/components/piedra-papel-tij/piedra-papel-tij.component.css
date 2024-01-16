@@ -2,7 +2,7 @@ body{
   box-sizing: border-box;
 }
 
-.papel{
+.papel, .piedra{
   transform: rotate(180deg);
 }
 
@@ -12,7 +12,20 @@ body{
 }
 
 .player{
-  border: 2px solid #24292e;
+  /*border: 2px solid #24292e;*/
   width: max-content;
   margin: 2rem;
+}
+
+.buttonContainer{
+  width: max-content;
+  margin: auto;
+}
+
+.button{
+  padding: 1rem 2rem;
+}
+
+.text{
+  text-align: center;
 }
