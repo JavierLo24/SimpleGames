@@ -1,6 +1,7 @@
-.body {
+body {
   background-image: url("./assets/piezas-domino-sobre-fondo-mesa-madera_870072-2610.jpg");
   background-size: cover;
-  height: 100vh;
+  height: 90vh;
   background-repeat: no-repeat;
+  width: 100vh;
 }

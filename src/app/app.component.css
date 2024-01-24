@@ -1,1 +1,5 @@
-
+.mainBody{
+  width: 197vh;
+  max-height: 100%;
+  position: relative;
+}

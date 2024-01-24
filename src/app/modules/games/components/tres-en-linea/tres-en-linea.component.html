@@ -1,0 +1,23 @@
+
+<div class="body">
+  <h1 class="textT">TIC TAC TOE JUEGO DE MESA</h1>
+  <div class="container">
+    <span class="textT">Puntaje X  = {{puntajeP1}}</span>
+    <div class="board">
+      <div class="row" *ngFor="let row of board; let rowIndex = index">
+        <div class="col" *ngFor="let col of row; let colIndex = index">
+          <button class="card" (click)="turno(rowIndex, colIndex)" [disabled]=finished>
+            <img src="{{col.player}}" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+    <span class="textT">Puntaje O = {{puntajeP2}}</span>
+  </div>
+    <h1 *ngIf="drawRound()" class="textT">EMPATE</h1>
+    <h1 *ngIf="!drawRound()" class="textT">{{texto}}</h1>
+  <div class="buttonContainer">
+    <button class="button" (click)="resetBoard()">Reset</button>
+    <button class="button" (click)="nextRound()">Next Round</button>
+  </div>
+</div>

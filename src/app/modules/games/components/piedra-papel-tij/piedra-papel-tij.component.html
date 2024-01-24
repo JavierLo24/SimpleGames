@@ -1,41 +1,40 @@
 <div class="body">
-<h1 class="textT">PIEDRA PAPEL O TIJERAS, JUEGO DE MESA</h1>
-<div class="container">
-  <div class="player player1">
-    <span>Jugador 1</span>
-    <div class="container">
-      <div *ngFor="let options of showOption">
-        <button class="button buttonP1" id="select1" (click)="asignOption(options.name)" [disabled]="isDisabled"><img class="imgP" src="{{options.img}}" alt="" ></button>
+<!--  Titulo del Juego -->
+  <h1 class="textT">PIEDRA PAPEL O TIJERAS, JUEGO DE MESA</h1>
+<!--  Contenedor Principal -->
+  <div class="container">
+<!--  Jugador 1  -->
+    <div class="player player1">
+      <span>Jugador 1</span>
+      <div class="container">
+        <div *ngFor="let options of showOption">
+          <button class="button buttonP1" id="select1" (click)="asignOption(options.name)" [disabled]="isDisabled"><img class="imgP" src="{{options.img}}" alt="" ></button>
+        </div>
       </div>
+      <span>Puntaje {{puntajeP1}}</span>
     </div>
-    <span>Puntaje {{puntajeP1}}</span>
+    <!--  Jugador 1  -->
+    <div class="player player2">
+      <span class="textT">Jugador 2/CPU</span>
+      <div>
+        <div *ngIf="player2 =='papel'">
+          <img class="imgP imgP2" src="./assets/Papel.png" alt="">
+        </div>
+        <div *ngIf="player2 =='tijera'">
+          <img class="imgP imgP2" src="./assets/Tijeras.png" alt="">
+        </div >
+        <div *ngIf="player2 =='piedra'">
+          <img class="imgP imgP2" src="./assets/Piedra.png" alt="">
+        </div>
+      </div>
+      <span>Puntaje {{puntajeP2}}</span>
+    </div>
   </div>
-
-  <div class="player player2">
-    <span class="textT">Jugador 2/CPU</span>
-    <div>
-    <div *ngIf="player2 =='papel'">
-      <img class="imgP imgP2" src="./assets/Papel.png" alt="">
-    </div>
-    <div *ngIf="player2 =='tijera'">
-      <img class="imgP imgP2" src="./assets/Tijeras.png" alt="">
-    </div >
-    <div *ngIf="player2 =='piedra'">
-      <img class="imgP imgP2" src="./assets/Piedra.png" alt="">
-    </div>
-    </div>
-    <span>Puntaje {{puntajeP2}}</span>
+  <!--  Botones  -->
+  <div class="buttonContainer">
+    <button class="BPlay" [disabled]="!isDisabled" (click)="pptEnAccion()">Play</button>
   </div>
-</div>
-
-<div class="buttonContainer">
-  <button class="BPlay" (click)="pptEnAccion()">Play</button>
-</div>
-<h1 class="textT">{{resultado}}</h1>
-
-<!--  <button (click)='startTimer()'>Start Timer</button>-->
-<!--  <button (click)='pauseTimer()'>Pause</button>-->
-
+  <h1 class="textT">{{resultado}}</h1>
   <p class="textT">{{timeLeft}} Segundos restantes....</p>
 </div>
 

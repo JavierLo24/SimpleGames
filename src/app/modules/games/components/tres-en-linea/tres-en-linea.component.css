@@ -1,0 +1,51 @@
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+}
+
+.col, .row{
+  font-size: 30px;
+  color: white;
+}
+
+.board{
+  margin: auto;
+  width: max-content;
+}
+
+.container{
+  display: flex;
+}
+
+img{
+  width: 100px;
+}
+
+.buttonContainer{
+  width: max-content;
+  margin: 2rem auto;
+}
+
+.button{
+  padding: 1rem;
+  margin-right: 1rem;
+}
+
+.card{
+  border: 8px solid black;
+  width: 130px;
+  height: 130px;
+  background-color: transparent;
+}
+
+.textT{
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  margin: auto;
+}

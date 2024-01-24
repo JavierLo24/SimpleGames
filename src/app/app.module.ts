@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {PiedraPapelTijComponent} from './modules/games/components/piedra-papel-tij/piedra-papel-tij.component'
 import {GamesModule} from "./modules/games/games.module";
+import {SharedModule} from "./modules/shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import {GamesModule} from "./modules/games/games.module";
     BrowserModule,
     GamesModule,
     AppRoutingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
