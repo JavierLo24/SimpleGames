@@ -30,6 +30,7 @@ export class PiedraPapelTijComponent {
       img: "./assets/Piedra.png",
     },
   ];
+
   relacionesDeVictoria: any = {
     papel: "piedra",
     piedra: "tijera",
@@ -51,29 +52,31 @@ export class PiedraPapelTijComponent {
     const randomIndex = Math.floor(Math.random() * this.showOption.length);
     const opcionAleatoria = this.showOption[randomIndex];
     this.player2 = opcionAleatoria.name
-
-    if (this.player1 === this.player2) {
+    if (this.player1 === this.player2)
+    {
       this.resultado = "Empate";
-    } else if (this.relacionesDeVictoria[this.player1] === this.player2) {
-      this.resultado = "Gana el Jugador 1";
-      this.puntajeP1++;
-    } else {
-      this.resultado = "Gana el Jugador 2";
-      this.puntajeP2++;
-    }
-    if (this.timeLeft == 0){
+    } else
+      if (this.relacionesDeVictoria[this.player1] === this.player2)
+      {
+        this.resultado = "Gana el Jugador 1";
+        this.puntajeP1++;
+      } else {
+        this.resultado = "Gana el Jugador 2";
+        this.puntajeP2++;
+      }
+    if (this.timeLeft == 0)
+    {
       this.isDisabled = true;
       clearInterval(this.interval);
       this.timeLeft = 5;
     }
   }
 
-    pptEnAccion():void{
-      this.startTimer()
-      this.isDisabled = false;
-      this.puntajeP1 = 0;
-      this.puntajeP2 = 0;
-
-    }
+  pptEnAccion():void{
+    this.startTimer()
+    this.isDisabled = false;
+    this.puntajeP1 = 0;
+    this.puntajeP2 = 0;
+  }
 
 }

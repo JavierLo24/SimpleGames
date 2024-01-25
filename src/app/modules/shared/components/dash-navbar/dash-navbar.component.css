@@ -1,3 +1,24 @@
 .mainContainer{
-  background-color: black;
+  background-color: saddlebrown;
+  border-radius: 10px ;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.buttonContent{
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonNV{
+  background-color: chocolate;
+  padding: 7px 5px;
+  border-radius: 2px;
+  border: none;
+}
+
+img{
+  width: 32px;
+  margin-bottom: 3px;
 }
